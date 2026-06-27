@@ -22,12 +22,12 @@ class InputText(BaseModel):
 
 
 @app.get("/")
-def root():
+def main():
     return {"message": "SmartPass AI is running"}
 
 
 @app.post("/validate")
-def validate_input(data: InputText):
+def root(data: InputText):
 
     text = data.text
 
