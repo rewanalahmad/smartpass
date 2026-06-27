@@ -22,7 +22,7 @@ class InputText(BaseModel):
 
 
 @app.get("/")
-def home():
+def root():
     return {"message": "SmartPass AI is running"}
 
 
