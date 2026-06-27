@@ -22,13 +22,12 @@ class InputText(BaseModel):
 
 
 @app.get("/")
-def main():
+def root():
     return {"message": "SmartPass AI is running"}
 
 
 @app.post("/validate")
-def root(data: InputText):
-
+def validate(data: InputText):
     text = data.text
 
     intent = detect_intent(text)
